@@ -1,0 +1,41 @@
+{
+  "name": "公众号素材助手",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "公众号素材助手",
+    "default_icon": {
+      "16": "icons/favicon-16x16.png",
+      "32": "icons/favicon-32x32.png",
+      "48": "icons/favicon.ico",
+      "128": "icons/android-chrome-192x192.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "tts",
+    "declarativeContent",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "icons/favicon-16x16.png",
+    "32": "icons/favicon-32x32.png",
+    "48": "icons/favicon.ico",
+    "128": "icons/android-chrome-192x192.png"
+  },
+  "homepage_url": "http://kristal.kz",
+  "omnibox": { "keyword" : "Kz" },
+  "web_accessible_resources": ["inject.js"]
+}
